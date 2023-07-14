@@ -1,0 +1,1 @@
+- ICON hat nur passende boundary files für Gitterstruktur `europa00625`
