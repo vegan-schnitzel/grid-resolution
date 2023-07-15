@@ -1,1 +1,1 @@
-- ICON hat nur passende boundary files für Gitterstruktur `europa00625`
+- ICON hat nur passende boundary files für Gitterstruktur `europa00625` -> deshalb COSMO
