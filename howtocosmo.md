@@ -14,8 +14,17 @@
 - es gibt ein postprocessing script in week #7
 
 ### BOUNDARY FILES
-- zu finden unter /daten/model/arch/CLM?
-- LMGRID.TXT beschreibt die Gitterstruktur (CCLM benutzt rotiertes Gitter!)
+- zu finden unter `/daten/model/arch/CLM4/CLM_SK_JAN1990/`
+```
+-- EraInt
+++ 1.0 Grad
+       Europa: ../CLM_SK_JAN1990/set03/LMGRID.TXT
+++ 0.5 Grad
+       Europa: ../CLM_SK_JAN1990/set16/LMGRID.TXT
+++ 0.2 Grad
+       Europa: ../CLM_SK_JAN1990/set10/LMGRID.TXT   
+```
+- `LMGRID.TXT` beschreibt die Gitterstruktur (CCLM benutzt rotiertes Gitter!)
 - Außerdem zu finden: Gitterauflösung, Bodenauflösung, ...
 
 ### OBSERVATIONS
