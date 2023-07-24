@@ -27,7 +27,16 @@
 - `LMGRID.TXT` beschreibt die Gitterstruktur (CCLM benutzt rotiertes Gitter!)
 - Außerdem zu finden: Gitterauflösung, Bodenauflösung, ...
 
+### REFERENCE DATA
+- ERA5 reanalysis data (1hr output, 0.28° resolution)
+- located on **poincare** at `/daten/reana/arch/reanalysis/reanalysis/FUB/IFS/ERA5-FC/1hr/atmos`
+- total precipitation: `nocftp`
+- large-scale precipitation: `nocflsp`
+- large-scale snowfall: `nocflsf`
+- convective precipitation: `prc`
+- convective snowfall: `nocfcsf`
+
 ### OBSERVATIONS
-- Global Precipitation Climatology Project
+- Global Precipitation Climatology Project (GPCP)
 - E-OBS gridded dataset
 - Meteorological data of Berlin - MEVIS

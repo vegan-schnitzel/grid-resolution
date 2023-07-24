@@ -1,0 +1,2 @@
+- GPCC ist nur auf Land definiert
+- Wie sieht LMGRID.txt für meine simulationen aus?
