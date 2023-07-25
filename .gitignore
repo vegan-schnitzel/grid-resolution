@@ -4,20 +4,11 @@ data
 *.odp
 # tex files
 *.aux
-*.bit
-*.blg
 *.bbl
-*.lof
+*.blg
+*.bcf
+*.sav
+*.xml
+*.gz
 *.log
-*.lot
-*.glo
-*.glx
-*.gxg
-*.gxs
-*.idx
-*.ilg
-*.ind
 *.out
-*.url
-*.svn
-*.toc
