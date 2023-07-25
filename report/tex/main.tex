@@ -16,11 +16,11 @@
 %\DeclareTOCStyleEntry[numwidth=0.85cm]{tocline}{section}
 
 \usepackage{fontspec} % find out what this package does exactly
-\setmainfont{FreeSerif}
-\setsansfont{FreeSans}
+\setmainfont{Free Serif}
+\setsansfont{Free Sans}
 % URLs should (still) be typed using monospace font
 % https://graphicdesign.stackexchange.com/questions/97173/is-monospacing-urls-in-academic-papers-still-advised
-\setmonofont{FreeMono}
+\setmonofont{inconsolata}
 %\newfontfamily\DejaSans{DejaVu Sans} % to display emojis
 
 \usepackage{csquotes} % quotation marks
@@ -46,7 +46,7 @@ pdfauthor={Robert Wright},
 ]{hyperref}
 \hypersetup{
 	colorlinks=true,
-	urlcolor=.,
+	urlcolor=cyan,
 	linkcolor=,
 	citecolor=,
 }
@@ -160,12 +160,13 @@ pdfauthor={Robert Wright},
 	
 	\newpage
 	\begingroup
+	\hypersetup{urlcolor=.}
 	\setlength{\emergencystretch}{3em}
 	\printbibliography
 	\endgroup
 	
-	%\newpage
-	%\appendix
-	%\input{sections/appendix.tex}
+	\newpage
+	\appendix
+	\input{sections/appendix.tex}
 	
 \end{document}
