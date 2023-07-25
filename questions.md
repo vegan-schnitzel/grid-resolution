@@ -1,2 +1,0 @@
-- Stratiformen & konvektiven Regen betrachten?
-- Mit welchen Beobachtungen vergleichen?
