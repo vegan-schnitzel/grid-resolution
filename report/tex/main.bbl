@@ -1,0 +1,128 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{MetOffice}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=7b086ade17f98c67706db118e071b47a}{%
+           family={{Meteorological Office}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{7b086ade17f98c67706db118e071b47a}
+      \strng{fullhash}{7b086ade17f98c67706db118e071b47a}
+      \strng{bibnamehash}{7b086ade17f98c67706db118e071b47a}
+      \strng{authorbibnamehash}{7b086ade17f98c67706db118e071b47a}
+      \strng{authornamehash}{7b086ade17f98c67706db118e071b47a}
+      \strng{authorfullhash}{7b086ade17f98c67706db118e071b47a}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{History of numerical weather prediction}
+      \field{urlday}{24}
+      \field{urlmonth}{7}
+      \field{urlyear}{2023}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.metoffice.gov.uk/weather/learn-about/how-forecasts-are-made/computer-models/history-of-numerical-weather-prediction
+      \endverb
+      \verb{url}
+      \verb https://www.metoffice.gov.uk/weather/learn-about/how-forecasts-are-made/computer-models/history-of-numerical-weather-prediction
+      \endverb
+    \endentry
+    \entry{schaettler2021}{manual}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=7e519e260c03d857b1beb0f4d67312b9}{%
+           family={Schättler},
+           familyi={S\bibinitperiod},
+           given={U.},
+           giveni={U\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9eaf22206b807daeb64c52f99cf5a895}{%
+           family={Doms},
+           familyi={D\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ed5623da42ee5c0b2e97e34f2478f7f8}{%
+           family={Schraff},
+           familyi={S\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {COSMO Consortium for Small-Scale Modelling}%
+      }
+      \strng{namehash}{a41d033ea3f4d7d3d8356874f73372ab}
+      \strng{fullhash}{538d1fbea4dc1c4fe4320db3392ec541}
+      \strng{bibnamehash}{a41d033ea3f4d7d3d8356874f73372ab}
+      \strng{authorbibnamehash}{a41d033ea3f4d7d3d8356874f73372ab}
+      \strng{authornamehash}{a41d033ea3f4d7d3d8356874f73372ab}
+      \strng{authorfullhash}{538d1fbea4dc1c4fe4320db3392ec541}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{COSMO-Model Version 6.00: A Description of the Nonhydrostatic Regional COSMO-Model - Part VII: User’s Guide}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.5676/DWD_PUB/NWV/COSMO-DOC_6.00_VII
+      \endverb
+    \endentry
+    \entry{schulzweida2022}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=55136b8ef95978568dc69eb57a6411ae}{%
+           family={Schulzweida},
+           familyi={S\bibinitperiod},
+           given={Uwe},
+           giveni={U\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Zenodo}%
+      }
+      \strng{namehash}{55136b8ef95978568dc69eb57a6411ae}
+      \strng{fullhash}{55136b8ef95978568dc69eb57a6411ae}
+      \strng{bibnamehash}{55136b8ef95978568dc69eb57a6411ae}
+      \strng{authorbibnamehash}{55136b8ef95978568dc69eb57a6411ae}
+      \strng{authornamehash}{55136b8ef95978568dc69eb57a6411ae}
+      \strng{authorfullhash}{55136b8ef95978568dc69eb57a6411ae}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{10}
+      \field{title}{CDO User Guide}
+      \field{version}{2.1.0}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.5281/zenodo.7112925
+      \endverb
+      \keyw{NetCDF,GRIB,interpolation,remapping,analysis,processing,CDO,Climate Data Operator}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
