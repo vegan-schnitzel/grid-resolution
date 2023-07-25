@@ -1,0 +1,171 @@
+\documentclass{scrartcl}
+
+\KOMAoption{toc}{bibliography}
+\KOMAoptions{
+	paper=a4,
+	fontsize=12pt,
+	parskip=true,
+	titlepage=false,
+	%appendixprefix=true,
+	%abstract=true,
+}
+\addtokomafont{disposition}{\boldmath}
+
+% section numbering
+%\renewcommand*{\thesection}{\thepart.\arabic{section}}
+%\DeclareTOCStyleEntry[numwidth=0.85cm]{tocline}{section}
+
+\usepackage{fontspec} % find out what this package does exactly
+\setmainfont{FreeSerif}
+\setsansfont{FreeSans}
+% URLs should (still) be typed using monospace font
+% https://graphicdesign.stackexchange.com/questions/97173/is-monospacing-urls-in-academic-papers-still-advised
+\setmonofont{FreeMono}
+%\newfontfamily\DejaSans{DejaVu Sans} % to display emojis
+
+\usepackage{csquotes} % quotation marks
+\usepackage[onehalfspacing]{setspace}
+\usepackage{mathtools}
+\usepackage[english,german]{translator} % siunitx needs translator package (not ngerman)! 
+\usepackage{siunitx}[=v2]
+\sisetup{%
+	separate-uncertainty=true,
+	%mode=match
+	%locale=?
+	%per-mode=fraction,
+}
+\DeclareSIUnit\ppm{\text{ppm}}
+\DeclareSIUnit\year{\text{yr}}
+\NewDocumentCommand{\angsi}{omom}{%
+	\ang[#1]{#2}\,\si[#3]{#4}%
+}
+% https://tex.stackexchange.com/questions/116426/recommend-way-to-get-angular-velocity-in-degree-with-siunitx
+\usepackage[
+pdfauthor={Robert Wright},
+%pdftitle={},
+]{hyperref}
+\hypersetup{
+	colorlinks=true,
+	urlcolor=.,
+	linkcolor=,
+	citecolor=,
+}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{pdfpages}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{cleveref}
+\usepackage{booktabs, makecell}
+%\usepackage{tabularx}
+\usepackage[roman]{parnotes}
+\usepackage[shortcuts]{extdash} % to hyphenate words with dashes in them
+%\usepackage{parskip} % not needed anymore as koma script provides this function
+\usepackage{xcolor}
+\usepackage[enable]{easy-todo}
+\usepackage[version=4]{mhchem}
+
+% LANGUAGE & DATE
+% Note: In general, it is advisable to activate the languages
+%       after all packages have been loaded
+\usepackage{polyglossia}
+\setdefaultlanguage[variant=british]{english}
+\setotherlanguages{ngerman}
+% load datetime2 after language is set
+% (can’t detect the region with polyglossia)
+\usepackage[en-GB]{datetime2}
+\DTMlangsetup[en-GB]{ord=raise}
+
+% REFERENCES
+\usepackage[
+	backend=biber,
+	style=numeric,
+	%bibstyle=authortitle,
+	autolang=langname,
+	uniquename=init,
+	giveninits=true,
+	maxnames=2,
+	%block=ragged,
+	%sorting=none,
+]{biblatex}
+\addbibresource{lit.bib}
+% don't print url and urldate
+%\AtEveryBibitem{
+%	\clearfield{url}
+%	\clearfield{urlyear}
+%}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% https://tex.stackexchange.com/questions/16765/biblatex-author-year-square-brackets
+\makeatletter
+
+\newrobustcmd*{\parentexttrack}[1]{%
+	\begingroup
+	\blx@blxinit
+	\blx@setsfcodes
+	\blx@bibopenparen#1\blx@bibcloseparen
+	\endgroup}
+
+\AtEveryCite{%
+	\let\parentext=\parentexttrack%
+	\let\bibopenparen=\bibopenbracket%
+	\let\bibcloseparen=\bibclosebracket}
+
+\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% COSTUM COMMANDS
+
+% change figsize globally
+\newcommand{\figwidth}{\textwidth}
+
+\newcommand{\kopf}[1]{%
+	\Large\textsf{\textbf{#1}}
+}
+
+% Markdown code style
+\definecolor{light-gray}{gray}{0.95}
+\newcommand{\code}[1]{\colorbox{light-gray}{\texttt{#1}}}
+
+% math stuff
+\newcommand*\mean[1]{\overline{#1}}
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+
+% chemnistry stuff
+\newcommand{\co}{\ce{CO2}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TITLE
+
+\subject{\textngerman{Modelle für Wetter \& Umwelt}}
+\title{COSMO-CLM: Influence of Grid Resolution on Precipitation Forecast}
+%\subtitle{}
+\author{Robert Wright}
+\date{\DTMdisplaydate{2023}{7}{24}{-1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+	
+	\maketitle
+	%\tableofcontents 
+	% https://tex.stackexchange.com/questions/341613/komascript-toc-prevent-column-break-between-sections-in-multicolumn-toc
+	
+	%\input{sections/abstract.tex}
+	\input{sections/introduction.tex}
+	\input{sections/sims.tex}
+	%\input{sections/methods.tex}
+	\input{sections/results-discussion.tex}
+	\input{sections/conclusion-outlook.tex}
+	
+	\newpage
+	\begingroup
+	\setlength{\emergencystretch}{3em}
+	\printbibliography
+	\endgroup
+	
+	%\newpage
+	%\appendix
+	%\input{sections/appendix.tex}
+	
+\end{document}

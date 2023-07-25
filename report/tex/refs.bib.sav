@@ -1,0 +1,12 @@
+@WWW{,
+  title = {History of numerical weather prediction},
+}
+
+@Misc{,
+  title        = {History of numerical weather prediction},
+  organization = {Met Office},
+  url          = {https://www.metoffice.gov.uk/weather/learn-about/how-forecasts-are-made/computer-models/history-of-numerical-weather-prediction},
+  urldate      = {2023-07-24},
+}
+
+@Comment{jabref-meta: databaseType:biblatex;}
